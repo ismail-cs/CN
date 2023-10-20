@@ -91,28 +91,64 @@ void tree2(){
 
     rectangle(-43, 0, -37, 0, -38.5, 15, -41.5, 15,129, 109, 42);
 
+    circle(4, -35, 17, 26, 171, 0);
+    circle(4, -38, 17, 33, 217, 0);
+
+    circle(4, -43, 17, 33, 217, 0);
+    circle(4, -45, 17, 26, 171, 0);
+
+    circle(4, -48, 21.5, 30, 200, 0);
+
+    circle(4, -43, 21.5, 28, 183, 0);
+    circle(4, -38, 21.5, 28, 183, 0);
+
+    circle(4, -33, 21.5, 30, 190, 0);
+
+    circle(4, -35, 25.5, 28, 184, 0);
+
+    circle(4, -46.5, 26,  55, 191, 30);
+
+    circle(4, -42, 25.5, 28, 184, 0);
+
+    circle(4, -39, 26.5, 28, 184, 0);
+    circle(4, -42, 28.5, 28, 184, 0);
+
+}
+
+void sky(){
+
+    rectangle(-70, 20, 70, 20, 70, 40, -70, 40, 145, 180, 255);
+}
+
+
+void sun(){
+
+    circle(5.5, 35, 33, 245, 255, 0);
+
+}
+
+
+void cloud(){
+
+    circle(2, 17, 33, 255, 255, 255);
+    circle(2, 15, 33, 255, 255, 255);
+    circle(3, 14, 34.5, 255, 255, 255);
+    circle(2, 12, 33, 255, 255, 255);
+
+    circle(2, 7, 33, 255, 255, 255);
+    circle(2, 5, 33, 255, 255, 255);
+    circle(3, 4, 34.5, 255, 255, 255);
+    circle(2, 6, 34.5, 255, 255, 255);
+    circle(2, 2, 33, 255, 255, 255);
 }
 
 
 
-void road (){
+void fild(){
 
-    rectangle(-50, 10, 25, -20, 35, 0, -40, 30,169, 169, 169);
+    rectangle(-70, -40, 70, -40, 70, 20, -70, 20, 113, 167, 91);
 
-    rectangle(-45.5, 19, 29.5, -11, 30.5, -9, -44.5, 21, 255, 255, 255);
-
-   // rectangle(-30.5, 14, 20.5, -11, 30.5, -9, -44.5, 21, 255, 255, 255);
-
-    rectangle(-37, 4, -32.8, 2.2, -28.5, 10.3, -32.7, 12.3, 0,0,0);
-
-    rectangle(-37, 4, -37.9, 2, -37.3, 1, -36, 4, 0,0,0);
-
-    circle(1.2, -34, 4.5, 255, 0, 0);
-    circle(1.2, -32.5, 7, 247, 255, 0);
-    circle(1.2, -31.0, 9.5, 27, 255, 0);
 }
-
-
 /* Handler for window-repaint event. Call back when the window first appears and
 whenever the window needs to be re-painted. */
 
@@ -132,14 +168,23 @@ void display() {
     glLineWidth(7.5);
 
 
-   // house ();
+    sky();
 
-   // tree1();
+    fild();
 
-    //tree2();
+    cloud();
 
-    road();
+    house ();
 
+    tree1();
+
+    tree2();
+
+    sun();
+
+
+
+    //moon();
 
 
     glFlush();  // Render now
@@ -158,4 +203,3 @@ int main(int argc, char** argv) {
     glutMainLoop();           // Enter the event-processing loop
     return 0;
 }
-
