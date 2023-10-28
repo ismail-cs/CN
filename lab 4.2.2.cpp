@@ -115,6 +115,19 @@ void tree2(){
 
 }
 
+void tree2(){
+
+    rectangle(-23, 0, -17, 0, -18.5, 15, -21.5, 15,129, 109, 42);
+
+    circle(4, -35, 17, 26, 171, 0);
+    circle(4, -38, 17, 33, 217, 0);
+    circle(4, -43, 17, 33, 217, 0);
+    circle(4, -45, 17, 26, 171, 0);
+
+    
+
+}
+
 void sky(){
 
     rectangle(-70, 20, 70, 20, 70, 40, -70, 40, 69, 69, 69);
@@ -148,19 +161,7 @@ void fild(){
     rectangle(-70, -40, 70, -40, 70, 20, -70, 20, 93, 125, 80);
 
 }
-/* Handler for window-repaint event. Call back when the window first appears and
-whenever the window needs to be re-painted. */
 
-
-
-
-/* Main function: GLUT runs as a console application starting at main()  */
-
-
-
-
-/* Handler for window-repaint event. Call back when the window first appears and
-whenever the window needs to be re-painted. */
 void display() {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT);         // Clear the color buffer (background)
@@ -180,10 +181,6 @@ void display() {
     tree2();
 
     moon();
-
-
-
-    //moon();
 
 
     glFlush();  // Render now
