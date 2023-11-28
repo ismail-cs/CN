@@ -48,9 +48,24 @@ void disback(int val)
 void display5()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+    glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+    
+    
+    glPushMatrix();
+    glTranslatef(0.0f,position, 0.0f);
+    glBegin(GL_QUADS);
+      glColor3f(0.0f, 1.0f, 1.0f);
+      glVertex2f(-0.2f, -0.2f);
+      glVertex2f( 0.2f, -0.2f);
+      glVertex2f( 0.2f,  0.2f);
+      glVertex2f(-0.2f,  0.2f);
+   glEnd();
+   glPopMatrix();
+   
+   
+   
+   glutTimerFunc(1500,disback,0);
 
-   //glutTimerFunc(1500,disback,0);
    glFlush();
 
 }
@@ -68,8 +83,17 @@ void display3()
 {
     glClear(GL_COLOR_BUFFER_BIT);
     glClearColor(0.0f, 1.0f, 0.0f, 1.0f);
-
-   glutTimerFunc(2000,display4,0);
+    glPushMatrix();
+glTranslatef(0.0f,position, 0.0f);
+   glBegin(GL_QUADS);
+      glColor3f(0.0f, 1.0f, 1.0f);
+      glVertex2f(-0.2f, -0.2f);
+      glVertex2f( 0.2f, -0.2f);
+      glVertex2f( 0.2f,  0.2f);
+      glVertex2f(-0.2f,  0.2f);
+   glEnd();
+   glPopMatrix();
+   glutTimerFunc(1500,display4,0);
    glFlush();
 }
 
@@ -80,14 +104,24 @@ void display2(int val) {
 
 }
 void display() {
-
-    glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.0f, 1.0f, 1.0f, 1.0f);
-
+   glClear(GL_COLOR_BUFFER_BIT);
+    glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 
 
-    glutTimerFunc(2000,display2,0);
-    glFlush();
+
+glPushMatrix();
+glTranslatef(0.0f,position, 0.0f);
+   glBegin(GL_QUADS);
+      glColor3f(0.0f, 1.0f, 1.0f);
+      glVertex2f(-0.2f, -0.2f);
+      glVertex2f( 0.2f, -0.2f);
+      glVertex2f( 0.2f,  0.2f);
+      glVertex2f(-0.2f,  0.2f);
+   glEnd();
+   glPopMatrix();
+
+glutTimerFunc(1500,display2,0);
+glFlush();
 
 }
 
