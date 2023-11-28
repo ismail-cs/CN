@@ -55,12 +55,12 @@ void display() {
 
 glPushMatrix();
 glTranslatef(position,0.0f, 0.0f);
-   glBegin(GL_QUADS);
+   glBegin(GL_POLYGON);
       glColor3f(1.0f, 0.0f, 0.0f);
-      glVertex2f(-0.2f, -0.2f);
+      glVertex2f(-0.2f, 0.0f);
       glVertex2f( 0.2f, -0.2f);
       glVertex2f( 0.2f,  0.2f);
-      glVertex2f(-0.2f,  0.2f);
+
    glEnd();
 glPopMatrix();
 
@@ -69,11 +69,10 @@ glPopMatrix();
 
  glPushMatrix();
 glTranslatef(position1,0.0f, 0.0f);
-   glBegin(GL_QUADS);
+   glBegin(GL_POLYGON);
       glColor3f(0.0f, 1.0f, 0.0f);
       glVertex2f(-0.2f, -0.2f);
-      glVertex2f( 0.2f, -0.2f);
-      glVertex2f( 0.2f,  0.2f);
+      glVertex2f( 0.2f, 0.0f);
       glVertex2f(-0.2f,  0.2f);
    glEnd();
    glPopMatrix();
@@ -82,24 +81,23 @@ glTranslatef(position1,0.0f, 0.0f);
 
    glPushMatrix();
 glTranslatef(0.0f,position, 0.0f);
-   glBegin(GL_QUADS);
+   glBegin(GL_POLYGON);
       glColor3f(0.0f, 0.0f, 1.0f);
-      glVertex2f(-0.2f, -0.2f);
-      glVertex2f( 0.2f, -0.2f);
-      glVertex2f( 0.2f,  0.2f);
-      glVertex2f(-0.2f,  0.2f);
+      glVertex2f(0.0f, -0.2f);
+      glVertex2f( 0.2f, 0.2f);
+      glVertex2f( -0.2f,  0.2f);
+
    glEnd();
    glPopMatrix();
 
 
     glPushMatrix();
 glTranslatef(0.0f,position1, 0.0f);
-   glBegin(GL_QUADS);
+   glBegin(GL_POLYGON);
       glColor3f(1.0f, 1.0f, 0.0f);
       glVertex2f(-0.2f, -0.2f);
       glVertex2f( 0.2f, -0.2f);
-      glVertex2f( 0.2f,  0.2f);
-      glVertex2f(-0.2f,  0.2f);
+      glVertex2f( 0.0f,  0.2f);
    glEnd();
    glPopMatrix();
 
@@ -128,4 +126,3 @@ int main(int argc, char** argv) {
    glutMainLoop();
    return 0;
 }
-
